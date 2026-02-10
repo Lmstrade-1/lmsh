@@ -5,111 +5,100 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact | LMSH</title>
   <meta name="description" content="Contact LM Skinner, Horologist." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 
   <style>
+    /* Page wrapper */
     .contact-page{
       max-width: var(--max);
       margin: 0 auto;
       padding: 32px 20px 80px;
     }
 
+    /* Headings */
     .contact-page h1{
       font-family: "Libre Baskerville", Georgia, serif;
-      font-weight: 700;
+      font-size: 34px;
       line-height: 1.2;
       margin: 0 0 18px;
-      font-size: 34px;
     }
 
     .contact-page h2{
       font-family: "Libre Baskerville", Georgia, serif;
-      font-weight: 700;
+      font-size: 24px;
       line-height: 1.2;
       margin: 0 0 14px;
-      font-size: 22px;
     }
 
-    .contact-page p{
-      margin: 0 0 18px;
-      max-width: 80ch;
+    /* Intro text – FULL WIDTH */
+    .contact-intro p{
+      margin: 0 0 20px;
+      max-width: none;
     }
 
+    /* Cards */
     .contact-card{
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 22px;
+      padding: 24px;
     }
 
-    .contact-card + .contact-card{
-      margin-top: 18px;
-    }
-
+    /* Form */
     .form{
       display: grid;
       gap: 14px;
-      margin-top: 12px;
+      margin-top: 14px;
     }
 
     .form label{
       display: grid;
       gap: 6px;
       font-weight: 600;
-      color: var(--text);
     }
 
     .form input,
     .form textarea{
       width: 100%;
       font: inherit;
-      color: var(--text);
-      background: rgb(255,255,255);
-      border: 1px solid rgb(227,224,218);
+      border: 1px solid var(--line);
       border-radius: 12px;
       padding: 10px 12px;
-      outline: none;
+      background: #fff;
     }
 
     .form textarea{
+      min-height: 140px;
       resize: vertical;
-      min-height: 130px;
-    }
-
-    .form input:focus,
-    .form textarea:focus{
-      border-color: rgb(196,191,182);
-      box-shadow: 0 0 0 4px rgba(31,31,31,0.06);
     }
 
     .note{
-      margin: 0;
-      color: var(--muted);
       font-size: 14px;
-      line-height: 1.6;
-      font-weight: 400;
+      color: var(--muted);
+      margin: 0;
     }
 
     .button{
-      justify-self: start;
       appearance: none;
-      border: 1px solid rgb(227,224,218);
-      background: rgb(255,255,255);
-      color: var(--text);
-      padding: 10px 14px;
+      border: 1px solid var(--line);
+      background: #fff;
       border-radius: 12px;
-      font: inherit;
+      padding: 10px 14px;
       font-weight: 600;
+      opacity: 0.6;
       cursor: not-allowed;
-      opacity: 0.65;
+      width: fit-content;
     }
 
+    /* Images */
     .contact-images{
-      margin-top: 22px;
+      margin: 24px 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
@@ -125,20 +114,18 @@
       display: block;
     }
 
-    .contact-details{
-      margin-top: 18px;
-    }
-
+    /* Details */
     .contact-line{
       margin: 0 0 10px;
     }
 
     .contact-line a{
-      color: inherit;
       text-decoration: underline;
       text-underline-offset: 3px;
+      color: inherit;
     }
 
+    /* Responsive */
     @media (max-width: 900px){
       .contact-images{
         grid-template-columns: 1fr;
@@ -154,27 +141,30 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <div class="brand">
-        <div class="mark" aria-hidden="true">LMSH</div>
-        <div>
-          <div class="brand-name">LM Skinner, Horologist</div>
-          <div class="brand-tag">Conservation led servicing and restoration of vintage timepieces.</div>
-        </div>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">LMSH</div>
+      <div>
+        <div class="brand-name">LM Skinner, Horologist</div>
+        <div class="brand-tag">Conservation led servicing and restoration of vintage timepieces.</div>
       </div>
-
-      <nav class="nav">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link active" href="contact.html">Contact</a>
-      </nav>
     </div>
-  </header>
 
-  <main class="contact-page">
-    <section>
-      <h1>Contact</h1>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link active" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
+<main class="contact-page">
+  <section>
+
+    <h1>Contact</h1>
+
+    <!-- FULL WIDTH INTRO -->
+    <div class="contact-intro">
       <p>Enquiries are handled by appointment only.</p>
 
       <p>
@@ -183,88 +173,96 @@
       </p>
 
       <p>
-        Each piece passes through a distinct inspection and assessment phase. Following inspection, findings and potential approaches are discussed before any work is scheduled.
-        As outlined elsewhere on this site, quotations are not provided prior to inspection.
+        Each piece passes through a distinct inspection and assessment phase. Following inspection, findings and potential
+        approaches are discussed before any work is scheduled. As outlined elsewhere on this site, quotations are not
+        provided prior to inspection.
       </p>
 
       <p>
-        Please use the contact form below to make initial contact. Clear photographs and any known information about the watch are helpful at this stage.
+        Please use the contact form below to make initial contact. Clear photographs and any known information about the
+        watch are helpful at this stage.
+      </p>
+    </div>
+
+    <!-- FORM -->
+    <div class="contact-card">
+      <h2>Contact form</h2>
+      <p class="note">
+        This form captures your details. Submission handling will be enabled once a form service is connected.
       </p>
 
-      <div class="contact-card">
-        <h2>Contact form</h2>
+      <form class="form" method="post">
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
+
+        <label>
+          Your email
+          <input type="email" name="email" required>
+        </label>
+
+        <label>
+          Watch and movement details
+          <input type="text" name="details" placeholder="Brand, model, approximate age, calibre if known">
+        </label>
+
+        <label>
+          What you want done
+          <textarea name="request" placeholder="A short description of the issue or the work requested"></textarea>
+        </label>
+
+        <label>
+          Location
+          <input type="text" name="location" placeholder="City, country">
+        </label>
+
         <p class="note">
-          This form captures your details. Submission handling will be enabled once a form service is connected.
+          Photos help. If possible, include clear images of the dial, caseback, and any damage. If you have safe access to
+          movement photos, those can also be helpful.
         </p>
 
-        <form class="form" action="" method="post">
-          <label>
-            Name
-            <input name="name" type="text" required>
-          </label>
+        <button class="button" disabled>Submit</button>
 
-          <label>
-            Your email
-            <input name="email" type="email" required>
-          </label>
-
-          <label>
-            Watch and movement details
-            <input name="watch_details" type="text" placeholder="Brand, model, approximate age, calibre if known">
-          </label>
-
-          <label>
-            What you want done
-            <textarea name="request" rows="6" placeholder="A short description of the issue or the work requested"></textarea>
-          </label>
-
-          <label>
-            Location
-            <input name="location" type="text" placeholder="City, country">
-          </label>
-
-          <p class="note">
-            Photos help. If possible, include clear images of the dial, caseback, and any damage. If you have safe access to movement photos, those can also be helpful.
-          </p>
-
-          <button type="submit" class="button" disabled>Submit</button>
-
-          <p class="note">
-            Form submission is currently disabled until a form service is connected.
-          </p>
-        </form>
-      </div>
-
-      <div class="contact-images" aria-label="Workshop images">
-        <img src="assets/images/movement-2.jpg" alt="Close-up watch detail" loading="lazy" />
-        <img src="assets/images/detail-1.jpg" alt="Macro watch mechanism" loading="lazy" />
-      </div>
-
-      <div class="contact-card contact-details">
-        <h2>Contact details</h2>
-        <p class="contact-line"><strong>Telephone:</strong> <a href="tel:+447988137461">07988 137461</a></p>
-        <p class="contact-line">
-          <strong>Address:</strong><br>
-          29 Marsh Green Road<br>
-          Dagenham, Essex<br>
-          RM10 9PR
+        <p class="note">
+          Form submission is currently disabled until a form service is connected.
         </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <div class="footer-left">
-        <div class="mark small" aria-hidden="true">LMSH</div>
-        <div class="muted">LM Skinner, Horologist</div>
-      </div>
-      <div class="muted">© <span id="year"></span> LMSH</div>
+      </form>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <!-- IMAGES -->
+    <div class="contact-images">
+      <img src="assets/images/movement-2.jpg" alt="Close-up watch detail" loading="lazy">
+      <img src="assets/images/detail-1.jpg" alt="Macro watch mechanism" loading="lazy">
+    </div>
+
+    <!-- DETAILS -->
+    <div class="contact-card">
+      <h2>Contact details</h2>
+      <p class="contact-line"><strong>Telephone:</strong> <a href="tel:+447988137461">07988 137461</a></p>
+      <p class="contact-line">
+        <strong>Address:</strong><br>
+        29 Marsh Green Road<br>
+        Dagenham, Essex<br>
+        RM10 9PR
+      </p>
+    </div>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-left">
+      <div class="mark small" aria-hidden="true">LMSH</div>
+      <div class="muted">LM Skinner, Horologist</div>
+    </div>
+    <div class="muted">© <span id="year"></span> LMSH</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
