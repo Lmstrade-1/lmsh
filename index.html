@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LMSH</title>
+  <meta name="description" content="LM Skinner, Horologist. Conservation-led servicing and restoration of vintage timepieces." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">LMSH</div>
+        <div>
+          <div class="brand-name">LM Skinner, Horologist</div>
+          <div class="brand-tag">Conservation-led servicing and restoration of vintage timepieces.</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>Independent Horologist</h1>
+          <p>
+            I carry out careful, conservation-led work on mechanical watches, focusing on methodical inspection,
+            controlled servicing, and sympathetic restoration. The aim is always dependable function and respectful
+            preservation of original character.
+          </p>
+          <p class="note">
+            By appointment only. This website is a professional profile and overview of my horology practice.
+          </p>
+        </div>
+
+        <div class="hero-image">
+          <img src="assets/images/hero-watch-movement.jpg" alt="Close-up of a mechanical watch movement" loading="eager" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Typical service workflow</h2>
+        <p>
+          Each piece is treated on its own merits, but a structured, best-practice service approach generally includes:
+        </p>
+
+        <ul class="bullets">
+          <li>Initial assessment, functional checks, and visual inspection of case and movement condition</li>
+          <li>Photographic documentation before work begins</li>
+          <li>Careful disassembly using appropriate supports and controlled handling</li>
+          <li>Cleaning of components using suitable processes for oils, residues, and contamination</li>
+          <li>Inspection for wear, corrosion, damage, or prior incorrect intervention</li>
+          <li>Rectification or replacement of worn parts where feasible and appropriate</li>
+          <li>Correct lubrication in the correct locations, using appropriate oils and greases</li>
+          <li>Reassembly and staged functional testing throughout</li>
+          <li>Regulation and performance checks across positions where relevant</li>
+          <li>Final observation period, basic verification of stability, and completion notes</li>
+        </ul>
+
+        <p class="note">
+          Vintage watches vary widely. Outcomes and timeframes depend on condition, parts availability, and prior history.
+        </p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <h2>Case and movement restoration</h2>
+        <div class="two-col">
+          <div>
+            <p>
+              Restoration work is approached conservatively, with an emphasis on preserving original geometry, surface
+              character, and legibility. Where appropriate, case work can include cleaning, controlled preparation,
+              and refinishing.
+            </p>
+            <p>
+              Preparation may include chemical cleaning and surface preparation steps designed to remove contaminants
+              and provide a stable base for finishing processes, applied with care and with attention to compatibility
+              of materials and coatings.
+            </p>
+            <p>
+              Finishing may include case polishing and refinishing, and where suitable, electroplating as part of a
+              conservation-led restoration approach.
+            </p>
+          </div>
+          <div class="image-stack">
+            <img src="assets/images/bench-1.jpg" alt="Watchmaking bench or workshop scene" loading="lazy" />
+            <img src="assets/images/movement-1.jpg" alt="Macro detail of a watch movement" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>How I work</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Appointment only</h3>
+            <p>Work is undertaken by appointment, with structured inspection and documentation.</p>
+          </div>
+          <div class="card">
+            <h3>Assessment first</h3>
+            <p>Any proposed work is guided by condition, feasibility, and a conservative approach to intervention.</p>
+          </div>
+          <div class="card">
+            <h3>Controlled process</h3>
+            <p>Cleanliness, correct handling, and repeatable steps are treated as non-negotiable fundamentals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery">
+      <div class="wrap">
+        <h2>Workshop details</h2>
+        <div class="grid">
+          <img src="assets/images/gears-1.jpg" alt="Macro detail of gears" loading="lazy" />
+          <img src="assets/images/detail-1.jpg" alt="Macro watch movement detail" loading="lazy" />
+          <img src="assets/images/tools-1.jpg" alt="Tools used in careful watch work" loading="lazy" />
+          <img src="assets/images/detail-2.jpg" alt="Close-up of watch components" loading="lazy" />
+        </div>
+        <p class="note">
+          Images used on this site are sourced from royalty-free libraries and are used under their published licences. :contentReference[oaicite:9]{index=9}
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <div class="mark small" aria-hidden="true">LMSH</div>
+        <div class="muted">LM Skinner, Horologist</div>
+      </div>
+      <div class="muted">© <span id="year"></span> LMSH</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
