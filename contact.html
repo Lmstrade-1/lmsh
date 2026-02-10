@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LMSH</title>
+  <meta name="description" content="Contact LM Skinner, Horologist." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">LMSH</div>
+        <div>
+          <div class="brand-name">LM Skinner, Horologist</div>
+          <div class="brand-tag">Conservation-led servicing and restoration of vintage timepieces.</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <h1>Contact</h1>
+        <p>
+          For correspondence, please use the details below. By appointment only.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h2>Details</h2>
+            <p class="contact-line"><strong>Email:</strong> <a href="mailto:LMSHorology@gmail.com">LMSHorology@gmail.com</a></p>
+            <p class="contact-line"><strong>Phone:</strong> <a href="tel:+447988137461">07988 137461</a></p>
+            <p class="contact-line"><strong>Address:</strong><br>
+              29 Marsh Green Road<br>
+              Dagenham, Essex<br>
+              RM10 9PR
+            </p>
+            <p class="note">
+              This page may be referenced as confirmation of professional presence.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h2>Message form</h2>
+            <p class="muted">
+              This form opens your email client and prepares a draft message.
+            </p>
+
+            <form class="form" action="mailto:LMSHorology@gmail.com" method="post" enctype="text/plain">
+              <label>
+                Name
+                <input name="Name" type="text" required>
+              </label>
+
+              <label>
+                Your email
+                <input name="Email" type="email" required>
+              </label>
+
+              <label>
+                Watch and movement details
+                <input name="Watch details" type="text" placeholder="Brand, model, approximate age, calibre if known">
+              </label>
+
+              <label>
+                What you want done
+                <textarea name="Request" rows="5" placeholder="A short description of the issue or the work requested"></textarea>
+              </label>
+
+              <label>
+                Location
+                <input name="Location" type="text" placeholder="City, country">
+              </label>
+
+              <p class="note">
+                Photos help. If possible, include clear images of the dial, caseback, movement (if safe to open), and any damage.
+              </p>
+
+              <button type="submit" class="button">Create email</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="contact-images">
+          <img src="assets/images/movement-2.jpg" alt="Close-up watch detail" loading="lazy" />
+          <img src="assets/images/detail-1.jpg" alt="Macro watch mechanism" loading="lazy" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <div class="mark small" aria-hidden="true">LMSH</div>
+        <div class="muted">LM Skinner, Horologist</div>
+      </div>
+      <div class="muted">© <span id="year"></span> LMSH</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
