@@ -5,123 +5,149 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact | LMSH</title>
   <meta name="description" content="Contact LM Skinner, Horologist." />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    .contact-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:20px;
-      align-items:start;
-      margin-top:22px;
-      margin-bottom:26px;
+    .contact-page{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .contact-page h1{
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 18px;
+      font-size: 34px;
+    }
+
+    .contact-page h2{
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 14px;
+      font-size: 22px;
+    }
+
+    .contact-page p{
+      margin: 0 0 18px;
+      max-width: 80ch;
     }
 
     .contact-card{
-      background: rgb(255,255,255);
-      border: 1px solid rgb(227,224,218);
-      border-radius: 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
       padding: 22px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     }
 
-    .contact-card h2{
-      margin-bottom:14px;
-    }
-
-    .contact-line{
-      margin: 0 0 14px;
-      max-width: 68ch;
+    .contact-card + .contact-card{
+      margin-top: 18px;
     }
 
     .form{
-      margin-top: 14px;
+      display: grid;
+      gap: 14px;
+      margin-top: 12px;
     }
 
     .form label{
-      display:block;
-      margin: 0 0 12px;
-      font-weight:600;
-      color: rgb(31,31,31);
+      display: grid;
+      gap: 6px;
+      font-weight: 600;
+      color: var(--text);
     }
 
     .form input,
     .form textarea{
-      display:block;
-      width:100%;
-      margin-top:8px;
-      padding: 12px 12px;
-      border-radius: 12px;
-      border: 1px solid rgb(227,224,218);
-      background: rgb(255,255,255);
+      width: 100%;
       font: inherit;
-      color: rgb(31,31,31);
-      line-height: 1.4;
+      color: var(--text);
+      background: rgb(255,255,255);
+      border: 1px solid rgb(227,224,218);
+      border-radius: 12px;
+      padding: 10px 12px;
+      outline: none;
+    }
+
+    .form textarea{
+      resize: vertical;
+      min-height: 130px;
     }
 
     .form input:focus,
     .form textarea:focus{
-      outline: none;
-      border-color: rgba(31,31,31,0.35);
-      box-shadow: 0 0 0 3px rgba(31,31,31,0.08);
+      border-color: rgb(196,191,182);
+      box-shadow: 0 0 0 4px rgba(31,31,31,0.06);
     }
 
     .note{
-      margin: 12px 0 0;
-      max-width: 68ch;
-      color: rgb(107,107,107);
+      margin: 0;
+      color: var(--muted);
       font-size: 14px;
       line-height: 1.6;
+      font-weight: 400;
     }
 
     .button{
-      display:inline-block;
-      margin-top:16px;
-      padding: 12px 14px;
-      border-radius: 12px;
+      justify-self: start;
+      appearance: none;
       border: 1px solid rgb(227,224,218);
       background: rgb(255,255,255);
-      color: rgb(31,31,31);
-      font-weight:600;
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font: inherit;
+      font-weight: 600;
       cursor: not-allowed;
-    }
-
-    .button[disabled]{
-      opacity: 0.6;
+      opacity: 0.65;
     }
 
     .contact-images{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:16px;
-      margin-top: 28px;
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
 
     .contact-images img{
-      width:100%;
-      height: 320px;
+      width: 100%;
+      height: 240px;
       object-fit: cover;
-      object-position: center;
-      border-radius: 14px;
-      border: 1px solid rgb(227,224,218);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-      display:block;
-      background: rgb(255,255,255);
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      display: block;
+    }
+
+    .contact-details{
+      margin-top: 18px;
+    }
+
+    .contact-line{
+      margin: 0 0 10px;
+    }
+
+    .contact-line a{
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     @media (max-width: 900px){
-      .contact-grid{
-        grid-template-columns: 1fr;
-      }
       .contact-images{
         grid-template-columns: 1fr;
       }
       .contact-images img{
-        height: 260px;
+        height: 220px;
+      }
+      .contact-page h1{
+        font-size: 30px;
       }
     }
   </style>
@@ -145,7 +171,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="contact-page">
     <section>
       <h1>Contact</h1>
 
@@ -157,74 +183,72 @@
       </p>
 
       <p>
-        Each piece passes through a distinct inspection and assessment phase. Following inspection, findings and potential approaches
-        are discussed before any work is scheduled. As outlined elsewhere on this site, quotations are not provided prior to inspection.
+        Each piece passes through a distinct inspection and assessment phase. Following inspection, findings and potential approaches are discussed before any work is scheduled.
+        As outlined elsewhere on this site, quotations are not provided prior to inspection.
       </p>
 
       <p>
         Please use the contact form below to make initial contact. Clear photographs and any known information about the watch are helpful at this stage.
       </p>
 
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h2>Contact details</h2>
+      <div class="contact-card">
+        <h2>Contact form</h2>
+        <p class="note">
+          This form captures your details. Submission handling will be enabled once a form service is connected.
+        </p>
 
-          <p class="contact-line">
-            <strong>Telephone:</strong> <a href="tel:+447988137461">07988 137461</a>
+        <form class="form" action="" method="post">
+          <label>
+            Name
+            <input name="name" type="text" required>
+          </label>
+
+          <label>
+            Your email
+            <input name="email" type="email" required>
+          </label>
+
+          <label>
+            Watch and movement details
+            <input name="watch_details" type="text" placeholder="Brand, model, approximate age, calibre if known">
+          </label>
+
+          <label>
+            What you want done
+            <textarea name="request" rows="6" placeholder="A short description of the issue or the work requested"></textarea>
+          </label>
+
+          <label>
+            Location
+            <input name="location" type="text" placeholder="City, country">
+          </label>
+
+          <p class="note">
+            Photos help. If possible, include clear images of the dial, caseback, and any damage. If you have safe access to movement photos, those can also be helpful.
           </p>
 
-          <p class="contact-line">
-            <strong>Address:</strong><br>
-            29 Marsh Green Road<br>
-            Dagenham, Essex<br>
-            RM10 9PR
+          <button type="submit" class="button" disabled>Submit</button>
+
+          <p class="note">
+            Form submission is currently disabled until a form service is connected.
           </p>
-        </div>
-
-        <div class="contact-card">
-          <h2>Contact form</h2>
-
-          <p class="muted">
-            This form captures your details. Submission handling will be enabled once a form service is connected.
-          </p>
-
-          <form class="form" action="" method="post" novalidate>
-            <label for="name">Name
-              <input id="name" name="name" type="text" autocomplete="name" required>
-            </label>
-
-            <label for="email">Your email
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </label>
-
-            <label for="watch_details">Watch and movement details
-              <input id="watch_details" name="watch_details" type="text" placeholder="Brand, model, approximate age, calibre if known">
-            </label>
-
-            <label for="request">What you want done
-              <textarea id="request" name="request" rows="5" placeholder="A short description of the issue or the work requested"></textarea>
-            </label>
-
-            <label for="location">Location
-              <input id="location" name="location" type="text" placeholder="City, country">
-            </label>
-
-            <p class="note">
-              Photos help. If possible, include clear images of the dial, caseback, and any damage. If you have safe access to movement photos, those can also be helpful.
-            </p>
-
-            <button type="submit" class="button" disabled>Submit</button>
-
-            <p class="note">
-              Form submission is currently disabled until a form service is connected.
-            </p>
-          </form>
-        </div>
+        </form>
       </div>
 
-      <div class="contact-images">
+      <div class="contact-images" aria-label="Workshop images">
         <img src="assets/images/movement-2.jpg" alt="Close-up watch detail" loading="lazy" />
         <img src="assets/images/detail-1.jpg" alt="Macro watch mechanism" loading="lazy" />
+      </div>
+
+      <div class="contact-card contact-details">
+        <h2>Contact details</h2>
+        <p class="contact-line"><strong>Telephone:</strong> <a href="tel:+447988137461">07988 137461</a></p>
+        <p class="contact-line">
+          <strong>Address:</strong><br>
+          29 Marsh Green Road<br>
+          Dagenham, Essex<br>
+          RM10 9PR
+        </p>
       </div>
     </section>
   </main>
