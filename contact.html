@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LMSH</title>
+  <title>Contact | LMSH</title>
   <meta name="description" content="Contact LM Skinner, Horologist." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -34,16 +35,16 @@
       <div class="wrap">
         <h1>Contact</h1>
 
+        <p>Enquiries are handled by appointment only.</p>
+
         <p>
-          Enquiries are handled by appointment only.
+          Initial contact is used to establish basic details and suitability before any meeting or inspection is arranged.
+          Watches are not accepted for work without prior discussion.
         </p>
 
         <p>
-          Initial contact is used to establish basic details and suitability before any meeting or inspection is arranged. Watches are not accepted for work without prior discussion.
-        </p>
-
-        <p>
-          Each piece passes through a distinct inspection and assessment phase. Following inspection, findings and potential approaches are discussed before any work is scheduled. As outlined elsewhere on this site, quotations are not provided prior to inspection.
+          Each piece passes through a distinct inspection and assessment phase. Following inspection, findings and potential approaches are discussed before any work is scheduled.
+          As outlined elsewhere on this site, quotations are not provided prior to inspection.
         </p>
 
         <p>
@@ -53,7 +54,12 @@
         <div class="contact-grid">
           <div class="contact-card">
             <h2>Contact details</h2>
-            <p class="contact-line"><strong>Telephone:</strong> <a href="tel:+447988137461">07988 137461</a></p>
+
+            <p class="contact-line">
+              <strong>Telephone:</strong>
+              <a href="tel:+447988137461">07988 137461</a>
+            </p>
+
             <p class="contact-line">
               <strong>Address:</strong><br>
               29 Marsh Green Road<br>
@@ -64,35 +70,36 @@
 
           <div class="contact-card">
             <h2>Contact form</h2>
+
             <p class="muted">
               This form captures your details. Submission handling will be enabled once a form service is connected.
             </p>
 
             <form class="form" action="" method="post">
-              <label>
-                Name
-                <input name="name" type="text" required>
-              </label>
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
 
-              <label>
-                Your email
-                <input name="email" type="email" required>
-              </label>
+              <div class="form-row">
+                <label for="email">Your email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
 
-              <label>
-                Watch and movement details
-                <input name="watch_details" type="text" placeholder="Brand, model, approximate age, calibre if known">
-              </label>
+              <div class="form-row">
+                <label for="watch_details">Watch and movement details</label>
+                <input id="watch_details" name="watch_details" type="text" placeholder="Brand, model, approximate age, calibre if known">
+              </div>
 
-              <label>
-                What you want done
-                <textarea name="request" rows="5" placeholder="A short description of the issue or the work requested"></textarea>
-              </label>
+              <div class="form-row">
+                <label for="request">What you want done</label>
+                <textarea id="request" name="request" rows="6" placeholder="A short description of the issue or the work requested"></textarea>
+              </div>
 
-              <label>
-                Location
-                <input name="location" type="text" placeholder="City, country">
-              </label>
+              <div class="form-row">
+                <label for="location">Location</label>
+                <input id="location" name="location" type="text" placeholder="City, country">
+              </div>
 
               <p class="note">
                 Photos help. If possible, include clear images of the dial, caseback, and any damage. If you have safe access to movement photos, those can also be helpful.
@@ -107,7 +114,7 @@
           </div>
         </div>
 
-        <div class="contact-images">
+        <div class="contact-images" aria-label="Watch imagery">
           <img src="assets/images/movement-2.jpg" alt="Close-up watch detail" loading="lazy" />
           <img src="assets/images/detail-1.jpg" alt="Macro watch mechanism" loading="lazy" />
         </div>
