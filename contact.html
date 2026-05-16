@@ -41,13 +41,14 @@
       max-width: none;
     }
 
-    /* Cards */
+    /* Cards - Form & Details now stack strictly in full-width single column */
     .contact-card{
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 24px;
+      margin-bottom: 24px; /* Clean spacing between stacked sections */
     }
 
     /* Form */
@@ -96,7 +97,7 @@
       width: fit-content;
     }
 
-    /* Images */
+    /* Images - Maintained side-by-side row stretching to max container width */
     .contact-images{
       margin: 24px 0;
       display: grid;
@@ -125,7 +126,7 @@
       color: inherit;
     }
 
-    /* Responsive */
+    /* Responsive styling for smaller devices */
     @media (max-width: 900px){
       .contact-images{
         grid-template-columns: 1fr;
@@ -161,60 +162,46 @@
 <main class="contact-page">
   <section>
 
-    <h1>Contact</h1>
+    <h1>Enquiries</h1>
 
-    <!-- FULL WIDTH INTRO -->
     <div class="contact-intro">
-      <p>Enquiries are handled by appointment only.</p>
+      <p>Enquiries are handled by appointment only. The workshop operates on an inspection-first workflow to ensure compliance with conservative restoration ethics. No quotation is provided prior to inspection.</p>
 
       <p>
-        Initial contact is used to establish basic details and suitability before any meeting or inspection is arranged.
-        Watches are not accepted for work without prior discussion.
-      </p>
-
-      <p>
-        Each piece passes through a distinct inspection and assessment phase. Following inspection, findings and potential
-        approaches are discussed before any work is scheduled. As outlined elsewhere on this site, quotations are not
-        provided prior to inspection.
-      </p>
-
-      <p>
-        Please use the contact form below to make initial contact. Clear photographs and any known information about the
-        watch are helpful at this stage.
+        Please use the contact form below to outline the requirements for the timepiece. The inclusion of clear photographs of the dial, case back, and movement helps establish preliminary context before scheduling an in-person assessment.
       </p>
     </div>
 
-    <!-- FORM -->
     <div class="contact-card">
       <h2>Contact form</h2>
       <p class="note">
         This form captures your details. Submission handling will be enabled once a form service is connected.
       </p>
 
-      <form class="form" method="post">
+      <form class="form" method="post" onsubmit="return false;">
         <label>
           Name
-          <input type="text" name="name" required>
+          <input type="text" name="name" disabled>
         </label>
 
         <label>
           Your email
-          <input type="email" name="email" required>
+          <input type="email" name="email" disabled>
         </label>
 
         <label>
           Watch and movement details
-          <input type="text" name="details" placeholder="Brand, model, approximate age, calibre if known">
+          <input type="text" name="details" placeholder="Brand, model, approximate age, calibre if known" disabled>
         </label>
 
         <label>
-          What you want done
-          <textarea name="request" placeholder="A short description of the issue or the work requested"></textarea>
+          Requirements
+          <textarea name="request" placeholder="A short description of the issue or the work requested" disabled></textarea>
         </label>
 
         <label>
           Location
-          <input type="text" name="location" placeholder="City, country">
+          <input type="text" name="location" placeholder="City, country" disabled>
         </label>
 
         <p class="note">
@@ -230,21 +217,20 @@
       </form>
     </div>
 
-    <!-- IMAGES -->
     <div class="contact-images">
       <img src="assets/images/movement-2.jpg" alt="Close-up watch detail" loading="lazy">
       <img src="assets/images/detail-1.jpg" alt="Macro watch mechanism" loading="lazy">
     </div>
 
-    <!-- DETAILS -->
     <div class="contact-card">
       <h2>Contact details</h2>
-      <p class="contact-line"><strong>Telephone:</strong> <a href="tel:+447988137461">07988 137461</a></p>
+      <p class="contact-line"><strong>Telephone:</strong> <a href="tel:+35796204908">96204908</a></p>
       <p class="contact-line">
-        <strong>Address:</strong><br>
-        29 Marsh Green Road<br>
-        Dagenham, Essex<br>
-        RM10 9PR
+        <strong>Workshop:</strong><br>
+        2 25th March<br>
+        Tsada<br>
+        Paphos<br>
+        8450
       </p>
     </div>
 
